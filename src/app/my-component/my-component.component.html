@@ -1,0 +1,10 @@
+<h1>This is "MyComponent"</h1>
+<h2>Remember: the ngOnChanges() lifecycle hook is only fired when a component's parent is changed</h2>
+<p>
+	In our case, the parent component is MyComponent, which has the property 'crimeInput'. This is then
+	read by the child component 'reader'. If 'reader' sees crimeInput has changed, then the event is fired.
+</p>
+
+<input type="text" [(ngModel)]="crimeInput" />
+
+<app-reader readerInput="{{crimeInput}}"></app-reader>
